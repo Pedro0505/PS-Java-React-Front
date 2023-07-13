@@ -1,0 +1,24 @@
+.input-search-label {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+.input-search {
+  border-radius: 10px;
+  border: 1px solid #AAA;
+  background: #FFF;
+  padding: 12px;
+  width: 280px;
+}
+
+.input-search-label-text {
+  font-size: 1.2em;
+  margin: 0 0 0 8px;
+}
+
+.input-search-lable-text-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
