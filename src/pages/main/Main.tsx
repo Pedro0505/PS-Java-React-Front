@@ -5,7 +5,6 @@ function Main() {
   return (
     <>
       <Header />
-      <div>Main</div>
     </>
   );
 }
