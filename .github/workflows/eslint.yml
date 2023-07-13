@@ -16,4 +16,4 @@ jobs:
         run: npm install
 
       - name: Executando o lint
-        run: npx eslint src/*
+        run: npx eslint . --ext .ts,.tsx
