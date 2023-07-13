@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {BiUser} from 'react-icons/bi';
 import {BsFillCalendar2DateFill} from 'react-icons/bs';
+import {AiOutlineSearch} from 'react-icons/ai';
 import SearchInput from '../searchInput/SearchInput';
 import './style.css';
 import IEvents from '../../interfaces/IEvents';
@@ -53,6 +54,10 @@ function SearchForm() {
         icon={<BiUser />}
         type="text"
       />
+      <button type="button" className="search-btn">
+        Pesquisar
+        <AiOutlineSearch fontSize={15} className="search-icon" />
+      </button>
     </div>
   );
 }
