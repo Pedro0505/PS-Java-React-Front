@@ -1,7 +1,12 @@
 import React from 'react';
+import Main from './pages/main/Main';
 
 function App() {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <Main />
+    </div>
+  );
 }
 
 export default App;
