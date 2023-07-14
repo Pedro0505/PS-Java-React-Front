@@ -1,4 +1,40 @@
 .input-search-container {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.form-container {
   margin: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-btn-container {
+  max-height: 85.33px;
+  display: flex;
+}
+
+.search-btn {
+  background-color: #FFB703;
+  color: white;
+  height: 41px;
+  width: 280px;
+  margin: 0 15px;
+  align-self: flex-end;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-icon {
+  margin-left: 8px;
+}
+
+@media (max-width: 1240px) {
+  .search-btn {
+    margin-top: 10px;
+  }
 }
