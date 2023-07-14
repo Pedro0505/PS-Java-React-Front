@@ -1,7 +1,10 @@
+.input-search-section {
+  margin: 10px 15px 0 15px;
+}
+
 .input-search-label {
   display: flex;
   flex-direction: column;
-  margin: 0 15px;
 }
 
 .input-search {
@@ -21,4 +24,14 @@
   display: flex;
   align-items: center;
   margin: 0 0 10px 0;
+}
+
+.input-search-error-section {
+  width: 280px;
+}
+
+.input-search-error-msg {
+  font-size: 0.8em;
+  margin: 8px 2px 5px 2px;
+  color: rgb(243, 34, 34);
 }
