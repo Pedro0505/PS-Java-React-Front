@@ -2,13 +2,15 @@ import React, {useContext, useEffect} from 'react';
 import {TransactionsContext} from '../../context/TransactionsContext';
 import {DataGrid, GridColDef} from '@mui/x-data-grid';
 import dayjs from 'dayjs';
+import './style.css';
 
 function TransactionsTable() {
-  const {fetchTransactions, transactions} = useContext(TransactionsContext);
+  const {fetchAllTransactions, transactions, periodBalance, totalBalance} =
+    useContext(TransactionsContext);
 
   useEffect(() => {
     (async () => {
-      await fetchTransactions('');
+      await fetchAllTransactions('');
     })();
   }, []);
 
@@ -39,18 +41,24 @@ function TransactionsTable() {
   ];
 
   return (
-    <div style={{height: 400, width: '60%'}}>
-      <DataGrid
-        rows={transactions}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {page: 0, pageSize: 5},
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-      />
-    </div>
+    <>
+      <div className="balance-container">
+        <p className="total-balance-text">{`Saldo total: R$ ${totalBalance}`}</p>
+        <p className="period-balance-text">{`Saldo no período: R$ ${periodBalance}`}</p>
+      </div>
+      <div style={{height: 400, width: '60%'}} className="table-container">
+        <DataGrid
+          rows={transactions}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {page: 0, pageSize: 5},
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+        />
+      </div>
+    </>
   );
 }
 

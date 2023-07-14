@@ -1,7 +1,10 @@
 import ITransactions from '../../interfaces/ITransactions';
 
 interface ITransactionsContextType {
-  fetchTransactions: (paramsUrl: string) => Promise<void>;
+  fetchTransactionsFilter: (paramsUrl: string) => Promise<void>;
+  fetchAllTransactions: (paramsUrl: string) => Promise<void>;
+  totalBalance: number;
+  periodBalance: number;
   transactions: ITransactions[];
 }
 
