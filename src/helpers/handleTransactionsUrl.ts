@@ -1,7 +1,7 @@
 import ISearchForm from '../interfaces/ISearchForm';
 import standardizingDate from './standardizingDate';
 
-const handleTransferenciasUrl = (form: ISearchForm) => {
+const handleTransactionsUrl = (form: ISearchForm) => {
   const {finalDate, initialDate, operatorName} = form;
 
   let urlParams = '';
@@ -13,10 +13,10 @@ const handleTransferenciasUrl = (form: ISearchForm) => {
   }
 
   if (operatorName !== '') {
-    urlParams += `${urlParams === '' ? '&' : '?'}operatorName=${operatorName}`;
+    urlParams += `${urlParams ? '&' : '?'}operatorName=${operatorName}`;
   }
 
   return urlParams;
 };
 
-export default handleTransferenciasUrl;
+export default handleTransactionsUrl;
