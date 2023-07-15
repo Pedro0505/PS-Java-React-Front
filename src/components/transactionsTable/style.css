@@ -1,0 +1,14 @@
+.table-container {
+  height: 400;
+  width: 60%;
+  margin-left: 15px;
+}
+
+.balance-container {
+  display: flex;
+  margin: 0 0 15px 15px;
+}
+
+.total-balance-text {
+  margin-right: 60px;
+}

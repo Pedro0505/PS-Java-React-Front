@@ -11,7 +11,7 @@ import ValidationForm from '../../helpers/ValidationForm';
 import handleTransactionsUrl from '../../helpers/handleTransactionsUrl';
 
 function SearchForm() {
-  const {fetchTransactions} = useContext(TransactionsContext);
+  const {fetchTransactionsFilter} = useContext(TransactionsContext);
   const [formValues, setFormValues] = useState({
     initialDate: '',
     finalDate: '',
@@ -46,7 +46,7 @@ function SearchForm() {
     const urlParam = handleTransactionsUrl(formValues);
     if (!handleError()) {
       try {
-        await fetchTransactions(urlParam);
+        await fetchTransactionsFilter(urlParam);
       } catch (error) {
         console.log();
       }

@@ -1,5 +1,4 @@
 import ISearchForm from '../interfaces/ISearchForm';
-import standardizingDate from './standardizingDate';
 
 const handleTransactionsUrl = (form: ISearchForm) => {
   const {finalDate, initialDate, operatorName} = form;
@@ -7,9 +6,7 @@ const handleTransactionsUrl = (form: ISearchForm) => {
   let urlParams = '';
 
   if (initialDate !== '' && finalDate !== '') {
-    const serializedInitialDate = standardizingDate(initialDate);
-    const serializedFinalDate = standardizingDate(finalDate);
-    urlParams += `?initialDate=${serializedInitialDate}&finalDate=${serializedFinalDate}`;
+    urlParams += `?initialDate=${initialDate}&finalDate=${finalDate}`;
   }
 
   if (operatorName !== '') {
