@@ -57,7 +57,7 @@ function SearchForm({accountId}: SearchFormProps) {
       try {
         await fetchTransactionsFilter(urlParam);
       } catch (error) {
-        console.log();
+        console.log(error);
       }
     }
   };

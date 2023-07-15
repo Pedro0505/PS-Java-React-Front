@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import SearchForm from '../../components/searchForm/SearchForm';
 import TransactionsTable from '../../components/transactionsTable/TransactionsTable';
 
-function Main() {
+function Transactions() {
   const params = useParams<{accountId: string}>();
 
   return (
@@ -14,4 +14,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Transactions;

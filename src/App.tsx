@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
-import Main from './pages/main/Main';
+import Transactions from './pages/transactions/Transactions';
 import {TransactionsProvider} from './context/TransactionsContext';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
@@ -15,7 +15,7 @@ function App() {
           path="/transactions/:accountId"
           element={
             <TransactionsProvider>
-              <Main />
+              <Transactions />
             </TransactionsProvider>
           }
         />
