@@ -8,7 +8,7 @@ const initialValue = {
   transactions: [
     {
       id: 1,
-      transferDate: '',
+      transferDate: new Date().toISOString(),
       value: 0,
       type: '',
       transactionOperatorName: '',
