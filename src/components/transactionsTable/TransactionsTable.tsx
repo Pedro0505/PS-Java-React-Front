@@ -4,13 +4,19 @@ import {DataGrid, GridColDef} from '@mui/x-data-grid';
 import dayjs from 'dayjs';
 import './style.css';
 
-function TransactionsTable() {
+interface TransactionsTableProps {
+  accountId: string | undefined;
+}
+
+function TransactionsTable({accountId}: TransactionsTableProps) {
   const {fetchAllTransactions, transactions, periodBalance, totalBalance} =
     useContext(TransactionsContext);
 
   useEffect(() => {
     (async () => {
-      await fetchAllTransactions('');
+      if (accountId) {
+        await fetchAllTransactions(accountId);
+      }
     })();
   }, []);
 

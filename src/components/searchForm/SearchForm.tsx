@@ -10,7 +10,11 @@ import {TransactionsContext} from '../../context/TransactionsContext';
 import ValidationForm from '../../helpers/ValidationForm';
 import handleTransactionsUrl from '../../helpers/handleTransactionsUrl';
 
-function SearchForm() {
+interface SearchFormProps {
+  accountId: string | undefined;
+}
+
+function SearchForm({accountId}: SearchFormProps) {
   const {fetchTransactionsFilter} = useContext(TransactionsContext);
   const [formValues, setFormValues] = useState({
     initialDate: '',
@@ -43,12 +47,17 @@ function SearchForm() {
   };
 
   const handleSubimit = async () => {
-    const urlParam = handleTransactionsUrl(formValues);
+    let urlParam = '';
+
+    if (accountId) {
+      urlParam = handleTransactionsUrl(formValues, accountId);
+    }
+
     if (!handleError()) {
       try {
         await fetchTransactionsFilter(urlParam);
       } catch (error) {
-        console.log();
+        console.log(error);
       }
     }
   };

@@ -1,16 +1,15 @@
 import ISearchForm from '../interfaces/ISearchForm';
 
-const handleTransactionsUrl = (form: ISearchForm) => {
+const handleTransactionsUrl = (form: ISearchForm, accountId: string) => {
   const {finalDate, initialDate, operatorName} = form;
-
-  let urlParams = '';
+  let urlParams = `?accountId=${accountId}`;
 
   if (initialDate !== '' && finalDate !== '') {
-    urlParams += `?initialDate=${initialDate}&finalDate=${finalDate}`;
+    urlParams += `&initialDate=${initialDate}&finalDate=${finalDate}`;
   }
 
   if (operatorName !== '') {
-    urlParams += `${urlParams ? '&' : '?'}operatorName=${operatorName}`;
+    urlParams += `&operatorName=${operatorName}`;
   }
 
   return urlParams;
