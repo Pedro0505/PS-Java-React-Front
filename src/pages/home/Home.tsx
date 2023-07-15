@@ -16,6 +16,7 @@ function Home() {
 
   return (
     <div className="home-account-list-container">
+      <h1 className="home-account-list-title">Selecione Uma Conta</h1>
       <AccountsList accounts={accounts} />
     </div>
   );
