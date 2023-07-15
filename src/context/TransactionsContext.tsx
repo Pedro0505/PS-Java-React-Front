@@ -51,9 +51,9 @@ export const TransactionsProvider = ({children}: ITransactionsContextProps) => {
     );
   };
 
-  const fetchAllTransactions = async () => {
+  const fetchAllTransactions = async (accountId: string) => {
     try {
-      const response = await getTransactions('');
+      const response = await getTransactions(`?accountId=${accountId}`);
       const balance = calcTotalBalance(response);
 
       setTotalBalance(balance);

@@ -1,14 +1,15 @@
 import React from 'react';
-import Header from '../../components/header/Header';
+import {useParams} from 'react-router-dom';
 import SearchForm from '../../components/searchForm/SearchForm';
 import TransactionsTable from '../../components/transactionsTable/TransactionsTable';
 
 function Main() {
+  const params = useParams<{accountId: string}>();
+
   return (
     <>
-      <Header />
-      <SearchForm />
-      <TransactionsTable />
+      <SearchForm accountId={params.accountId} />
+      <TransactionsTable accountId={params.accountId} />
     </>
   );
 }
