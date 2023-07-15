@@ -41,9 +41,13 @@ export const TransactionsProvider = ({children}: ITransactionsContextProps) => {
   };
 
   const calcTotalBalance = (transactions: ITransactions[]) => {
-    return transactions.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.value,
-      0,
+    return Number(
+      transactions
+        .reduce(
+          (accumulator, currentValue) => accumulator + currentValue.value,
+          0,
+        )
+        .toFixed(2),
     );
   };
 
