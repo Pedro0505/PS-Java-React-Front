@@ -2,6 +2,8 @@
 
 Este projeto é uma aplicação web feita com React, que lista os usuários e filtrar suas transações bancárias. O objetivo principal é fornecer uma interface para visualizar e filtrar as transações de cada usuário, permitindo que o usuário do sistema tenha uma visão detalhada de suas atividades financeiras.
 
+![](https://raw.githubusercontent.com/Pedro0505/PS-Java-React-Front/main/public/presentation.gif)
+
 ## Recursos Principais:
 
 1- Filtragem por Nome: O sistema permitirá ao usuário filtrar as transações bancárias pelo nome da pessoa que realizou a transação.
@@ -35,9 +37,9 @@ Este projeto é uma aplicação web feita com React, que lista os usuários e fi
 
 3. Preparando o ambiente:
 
-3.1 Na raiz do projeto crie um arquivo chamado .env
+    3.1 Na raiz do projeto crie um arquivo chamado .env
 
-3.2 No arquivo .env escreva o host onde a api está rodando
+    3.2 No arquivo .env escreva o host onde a api está rodando
 
 ```bash
   # Exemplo:
@@ -59,8 +61,11 @@ Este projeto é uma aplicação web feita com React, que lista os usuários e fi
             Iniciando o projeto com Docker Compose 🐳
         </b>
     </summary>
+    <br>
 
   ***⚠️ Para garantir um bom funcionamento é necessário que tenha instalado o docker e o docker-compose nas versões 20.10.16 e 1.29 ou superior respectivamente***
+    
+<br>
 
 1. Clonando o Projeto do GitHub
 
