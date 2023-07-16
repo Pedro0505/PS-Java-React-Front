@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+# Search Bank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web feita com React, que lista os usuários e filtrar suas transações bancárias. O objetivo principal é fornecer uma interface para visualizar e filtrar as transações de cada usuário, permitindo que o usuário do sistema tenha uma visão detalhada de suas atividades financeiras.
 
-## Available Scripts
+## Recursos Principais:
 
-In the project directory, you can run:
+1- Filtragem por Nome: O sistema permitirá ao usuário filtrar as transações bancárias pelo nome da pessoa que realizou a transação.
 
-### `npm start`
+2- Filtragem por Período de Tempo: Além do filtro por nome, o sistema também permitirá filtrar as transações com base no período de tempo em que foram realizadas. O usuário poderá definir uma data de início e uma data de término para restringir a busca a um intervalo específico.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3- Detalhes da Transação: Cada transação listada incluirá informações, como a data da transação, o valor envolvido, e o tipo de transação (por exemplo, depósito, saque, transferência, etc.).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instalação
+<details>
+    <summary>
+        <b>
+            Instalando o Search Bank com node
+        </b>
+    </summary>
 
-### `npm test`
+  <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clonando o Projeto do GitHub
 
-### `npm run build`
+```bash
+  git clone git@github.com:Pedro0505/PS-Java-React-Front.git
+  cd PS-Java-React-Front
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Instalando as dependências
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Preparando o ambiente:
 
-### `npm run eject`
+3.1 Na raiz do projeto crie um arquivo chamado .env
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3.2 No arquivo .env escreva o host onde a api está rodando
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  # Exemplo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  REACT_APP_PUBLIC_API=http://localhost:8080
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Iniciar a aplicação:
 
-## Learn More
+```bash
+  npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+</details>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details>
+    <summary>
+        <b>
+            Iniciando o projeto com Docker Compose 🐳
+        </b>
+    </summary>
+
+  ***⚠️ Para garantir um bom funcionamento é necessário que tenha instalado o docker e o docker-compose nas versões 20.10.16 e 1.29 ou superior respectivamente***
+
+1. Clonando o Projeto do GitHub
+
+```bash
+  git clone git@github.com:Pedro0505/PS-Java-React-Front.git
+  cd PS-Java-React-Front
+```
+
+2. Suba os containers
+
+```bash
+  docker-compose -f docker-compose.dev.yml up --build -d
+```
+
+3. Quando o processo dos containers estiver acabado acesse a aplicação usando o seguinte endereço
+
+```bash
+  http://localhost:3000
+```
+
+4. Para derrubar os containers
+
+```bash
+  docker-compose -f docker-compose.dev.yml down --rmi all --volumes --remove-orphans
+```
+
+<br>
+
+</details>
+
+## Stack utilizada
+
+- React
+- Typescript
+- Material Ui
+- React Router Dom
+- Dayjs
+- Axios
