@@ -4,6 +4,8 @@ Este projeto é uma aplicação web feita com React, que lista os usuários e fi
 
 ![](https://raw.githubusercontent.com/Pedro0505/PS-Java-React-Front/main/public/presentation.gif)
 
+[Protótipo no Figma](https://www.figma.com/file/P1U7sqEKNHRFDmIpSHSPd8/SearchBank?type=design&node-id=0%3A1&mode=design&t=mNVyBV2hfzFcAkWW-1)
+
 ## Recursos Principais:
 
 1- Filtragem por Nome: O sistema permitirá ao usuário filtrar as transações bancárias pelo nome da pessoa que realizou a transação.
